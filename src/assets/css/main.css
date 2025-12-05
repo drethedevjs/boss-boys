@@ -47,6 +47,10 @@
   @apply py-3 px-5 rounded-md;
 }
 
+h2 {
+  @apply font-good-times;
+}
+
 p {
   @apply font-roboto;
 }
