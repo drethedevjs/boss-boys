@@ -1,9 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 @plugin "daisyui";
 
 @layer base;
 
+@font-face {
+  font-family: "GoodTimes";
+  src: url("src/assets/fonts/good times rg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @theme {
+  --font-good-times: "Good Times", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
   /* Primary Colors */
   --color-boss-green: #1a2019;
   --color-primary-light: #2a3329;
@@ -35,4 +45,8 @@
 
 .boss-btn {
   @apply py-3 px-5 rounded-md;
+}
+
+p {
+  @apply font-roboto;
 }
