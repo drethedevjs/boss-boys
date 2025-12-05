@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@layer base;
+
+@theme {
+  /* Primary Colors */
+  --color-boss-green: #1a2019;
+  --color-primary-light: #2a3329;
+  --color-primary-dark: #0d100c;
+
+  /* Secondary Colors */
+  --color-boss-gold: #bf7504;
+  --color-secondary-light: #d99a3a;
+  --color-secondary-dark: #8c5604;
+
+  /* Accent Colors */
+  --color-accent: #e8dcc4;
+  --color-success: #4a7c59;
+  --color-warning: #d97706;
+  --color-error: #b91c1c;
+
+  /* Neutral Colors */
+  --color-neutral-50: #f9f9f8;
+  --color-neutral-100: #e8e7e5;
+  --color-neutral-200: #d1cfc9;
+  --color-neutral-300: #a8a49b;
+  --color-neutral-400: #7a746a;
+  --color-neutral-500: #5a554c;
+  --color-neutral-600: #3f3b34;
+  --color-neutral-700: #2a2722;
+  --color-neutral-800: #1a1815;
+  --color-neutral-900: #0d0c0a;
+}
+
+.boss-btn {
+  @apply py-3 px-5 rounded-md;
+}
