@@ -54,3 +54,19 @@ h2 {
 p {
   @apply font-roboto;
 }
+
+nav li {
+  @apply inline-block px-4 py-3 border-b-2 border-b-transparent hover:border-b-boss-green;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  @apply text-boss-green;
+}
+
+.page-header {
+  @apply lg:text-5xl text-2xl text-right font-good-times;
+}
