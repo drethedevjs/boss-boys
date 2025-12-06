@@ -32,9 +32,9 @@ const Home = () => {
               <div className="card-body items-center text-center">
                 <h3 className="card-title">{p.title}</h3>
                 <p>{p.blurb || truncate(p.content[0], 100)}</p>
-                <button className="boss-btn bg-boss-gold text-white">
+                {/* <button className="boss-btn bg-boss-gold text-white">
                   Read
-                </button>
+                </button> */}
               </div>
             </div>
           ))}
