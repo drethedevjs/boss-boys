@@ -80,7 +80,7 @@ p {
 }
 
 .boss-container {
-  @apply container mx-auto w-2/3;
+  @apply container mx-auto p-10 lg:px-40;
 }
 
 .boss-container p {

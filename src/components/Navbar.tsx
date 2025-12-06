@@ -21,8 +21,20 @@ export const Navbar = () => {
               Meet the Mentor
             </NavLink>
           </li>
-          <li className="text-gray-400 cursor-not-allowed">The Boys</li>
-          <li className="text-gray-400 cursor-not-allowed">Donate</li>
+          <li className="hover:text-boss-gold">
+            <NavLink
+              to="https://www.paypal.com/donate/?hosted_button_id=B8HFHLRW86GEY"
+              end
+            >
+              Donate
+            </NavLink>
+          </li>
+          <li
+            className="text-gray-400 cursor-not-allowed"
+            title="Page Under Construction"
+          >
+            The Boys
+          </li>
         </ul>
       </div>
     </nav>

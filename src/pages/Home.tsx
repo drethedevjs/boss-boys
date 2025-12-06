@@ -18,7 +18,7 @@ const Home = () => {
         </h2>
         <div className="grid gap-4 grid-cols-1 lg:grid-cols-3">
           {posts.map((p, idx) => (
-            <div key={idx} className="card bg-base-100 w-96 shadow-sm">
+            <div key={idx} className="card bg-base-100 w-full shadow-sm">
               <figure className="px-10 pt-10">
                 <img
                   src={
