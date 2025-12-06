@@ -74,6 +74,15 @@ p {
 #about h2 {
   @apply mb-3 text-3xl!;
 }
+
 #about p {
   @apply mb-6;
+}
+
+.boss-container {
+  @apply container mx-auto w-2/3;
+}
+
+.boss-container p {
+  @apply mb-6 lg:text-2xl;
 }

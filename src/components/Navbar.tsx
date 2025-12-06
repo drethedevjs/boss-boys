@@ -16,8 +16,13 @@ export const Navbar = () => {
               About
             </NavLink>
           </li>
-          <li className="hover:text-boss-gold">The Boys</li>
-          <li className="hover:text-boss-gold">Donate</li>
+          <li className="hover:text-boss-gold">
+            <NavLink to="/meet-the-mentor" end>
+              Meet the Mentor
+            </NavLink>
+          </li>
+          <li className="text-gray-400 cursor-not-allowed">The Boys</li>
+          <li className="text-gray-400 cursor-not-allowed">Donate</li>
         </ul>
       </div>
     </nav>
