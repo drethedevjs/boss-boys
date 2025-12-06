@@ -64,9 +64,16 @@ h2,
 h3,
 h4,
 p {
-  @apply text-boss-green;
+  @apply text-boss-green dark:text-boss-gold;
 }
 
 .page-header {
   @apply lg:text-5xl text-2xl text-right font-good-times;
+}
+
+#about h2 {
+  @apply mb-3 text-3xl!;
+}
+#about p {
+  @apply mb-6;
 }
