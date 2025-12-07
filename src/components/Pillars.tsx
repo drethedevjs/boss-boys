@@ -1,26 +1,30 @@
 import { HeartHandshake, House, ShieldUser } from "lucide-react";
+import { NavLink } from "react-router";
 
 const Pillars = () => {
   const pillars = [
     {
       id: 1,
       name: "Community Leaders",
-      icon: ShieldUser
+      icon: ShieldUser,
+      link: "pillar/community-leaders"
     },
     {
       id: 2,
       name: "Faithful Husbands",
-      icon: HeartHandshake
+      icon: HeartHandshake,
+      link: "pillar/faithful-husbands"
     },
     {
       id: 3,
       name: "Loving Fathers",
-      icon: House
+      icon: House,
+      link: "pillar/loving-fathers"
     }
   ];
 
   return (
-    <div className="p-20 place-items-center">
+    <section id="pillars" className="p-20 place-items-center">
       <h2 className="lg:text-6xl text-5xl pb-10 font-good-times text-center">
         Our Pillars
       </h2>
@@ -39,14 +43,17 @@ const Pillars = () => {
                   {p.name}
                 </p>
               </div>
-              <button className="boss-btn bg-boss-green text-white">
+              <NavLink
+                to={p.link}
+                className="boss-btn bg-boss-green dark:bg-boss-gold text-white"
+              >
                 Learn More
-              </button>
+              </NavLink>
             </div>
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 
