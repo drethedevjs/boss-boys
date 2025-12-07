@@ -25,6 +25,7 @@ export const Navbar = () => {
       <li className="hover:text-boss-gold">
         <NavLink
           to="https://www.paypal.com/donate/?hosted_button_id=B8HFHLRW86GEY"
+          target="_blank"
           end
         >
           Donate
