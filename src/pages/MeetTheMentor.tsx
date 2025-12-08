@@ -2,11 +2,15 @@ export const MeetTheMentor = () => {
   return (
     <div className="boss-container">
       <h1 className="page-header mb-10">Meet the Mentor</h1>
+      <img
+        src="images/andre-headshot.jpg"
+        className="rounded-full lg:w-80 lg:h-80 w-40 h-40 drop-shadow-2xl object-cover place-self-center mb-8"
+      />
       <p>
-        Andre Thomas is software engineer. His connection with North Augusta
-        Middle Schools comes by him being a local. He is also a small business
-        owner, owning a photography and videography business that serves
-        families and small businesses alike.
+        Andre Thomas is a software engineer with a deep commitment to his
+        community. His involvement with North Augusta Middle School stems from
+        both his local ties and his genuine passion for making a positive impact
+        on young lives in the area.
       </p>
       <p>
         Over the past few years, Thomas has had a growing burden to help his
