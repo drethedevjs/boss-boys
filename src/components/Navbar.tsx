@@ -72,7 +72,7 @@ export const Navbar = () => {
 
       {/* Mobile menu content */}
       {open && (
-        <div className="md:hidden absolute bg-boss-green w-full">
+        <div className="md:hidden absolute bg-boss-green w-full text-white dark:text-boss-gold z-10">
           <ul className="flex flex-col space-y-2 font-good-times">{Links}</ul>
         </div>
       )}
