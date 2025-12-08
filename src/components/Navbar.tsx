@@ -33,11 +33,9 @@ export const Navbar = () => {
         {/* Desktop links */}
         <ul className="hidden md:flex w-full justify-end space-x-6 font-good-times">
           {links.map((l, idx) => (
-            <li className="hover:text-boss-gold" key={idx}>
-              <NavLink to={l.link} end>
-                {l.text}
-              </NavLink>
-            </li>
+            <NavLink to={l.link} key={idx} end>
+              <li className="hover:text-boss-gold">{l.text}</li>
+            </NavLink>
           ))}
         </ul>
 
