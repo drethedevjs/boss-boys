@@ -5,40 +5,16 @@ import { NavLink } from "react-router";
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const Links = (
-    <>
-      <li className="hover:text-boss-gold">
-        <NavLink to="/" end>
-          Home
-        </NavLink>
-      </li>
-      <li className="hover:text-boss-gold">
-        <NavLink to="/about" end>
-          About
-        </NavLink>
-      </li>
-      <li className="hover:text-boss-gold">
-        <NavLink to="/meet-the-mentor" end>
-          Meet the Mentor
-        </NavLink>
-      </li>
-      <li className="hover:text-boss-gold">
-        <NavLink
-          to="https://www.paypal.com/donate/?hosted_button_id=B8HFHLRW86GEY"
-          target="_blank"
-          end
-        >
-          Donate
-        </NavLink>
-      </li>
-      <li
-        className="text-gray-400 cursor-not-allowed"
-        title="Page Under Construction"
-      >
-        The Boys
-      </li>
-    </>
-  );
+  const links = [
+    { link: "/", text: "Home" },
+    { link: "/about", text: "About" },
+    { link: "/meet-the-mentor", text: "Meet the Mentor" },
+    {
+      link: "https://www.paypal.com/donate/?hosted_button_id=B8HFHLRW86GEY",
+      text: "Donate"
+    }
+    // { link: "#", text: "The Boys" }
+  ];
 
   return (
     <nav className="">
@@ -56,7 +32,13 @@ export const Navbar = () => {
 
         {/* Desktop links */}
         <ul className="hidden md:flex w-full justify-end space-x-6 font-good-times">
-          {Links}
+          {links.map((l, idx) => (
+            <li className="hover:text-boss-gold" key={idx}>
+              <NavLink to={l.link} end>
+                {l.text}
+              </NavLink>
+            </li>
+          ))}
         </ul>
 
         {/* Mobile menu button */}
@@ -73,7 +55,19 @@ export const Navbar = () => {
       {/* Mobile menu content */}
       {open && (
         <div className="md:hidden absolute bg-boss-green w-full text-white dark:text-boss-gold z-10">
-          <ul className="flex flex-col space-y-2 font-good-times">{Links}</ul>
+          <ul className="flex flex-col space-y-2 font-good-times">
+            {links.map((l, idx) => (
+              <NavLink
+                to={l.link}
+                end
+                key={idx}
+                className="border-b-boss-gold! border-b-2"
+                onClick={() => setOpen(v => !v)}
+              >
+                <li className="hover:text-boss-gold">{l.text}</li>
+              </NavLink>
+            ))}
+          </ul>
         </div>
       )}
     </nav>
