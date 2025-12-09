@@ -4,7 +4,7 @@ export const MeetTheMentor = () => {
       <h1 className="page-header mb-10">Meet the Mentor</h1>
       <img
         src="images/andre-headshot.jpg"
-        className="rounded-full lg:w-80 lg:h-80 w-40 h-40 drop-shadow-2xl object-cover place-self-center mb-8"
+        className="rounded-full lg:w-80 lg:h-80 w-40 h-40 drop-shadow-lg object-cover mb-8 mx-auto"
       />
       <p>
         Andre Thomas is a software engineer with a deep commitment to his
