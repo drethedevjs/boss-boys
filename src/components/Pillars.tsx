@@ -38,7 +38,7 @@ const Pillars = () => {
               className="flex flex-col justify-between rounded-lg text-center place-items-center lg:w-1/3"
             >
               <div className="place-items-center">
-                <Icon className="mb-5 text-boss-gold hover:scale-105 hover:drop-shadow-md transition-all lg:size-50 md:size-32 size-40" />
+                <Icon className="mb-5 mx-auto text-boss-gold hover:scale-105 hover:drop-shadow-md transition-all lg:size-50 md:size-32 size-40" />
                 <p className="text-3xl mb-5 font-good-times! lg:text-3xl md:text-2xl sm:text-xl">
                   {p.name}
                 </p>
