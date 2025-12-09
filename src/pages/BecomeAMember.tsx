@@ -1,7 +1,7 @@
 export const BecomeAMember = () => {
   return (
     <div className="boss-container">
-      <h1 className="page-header mb-10">Become A Member</h1>
+      <h1 className="page-header">Become A Member</h1>
       <p>
         Unfortunately, not all students interested in being a part of the
         program can participate. In order to show value to the students we make

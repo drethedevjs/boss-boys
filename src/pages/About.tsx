@@ -1,7 +1,7 @@
 export const About = () => {
   return (
     <div id="about" className="boss-container">
-      <h1 className="page-header mb-10">About</h1>
+      <h1 className="page-header">About</h1>
       <section aria-labelledby="in-a-word">
         <h2 id="in-a-word">In a Word</h2>
         <p>
