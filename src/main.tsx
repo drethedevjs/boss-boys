@@ -5,6 +5,7 @@ import "./assets/css/main.css";
 import { RootErrorBoundary } from "./components/RootErrorBoundary";
 import RootLayout from "./layouts/RootLayout";
 import { About } from "./pages/About";
+import { BecomeAMember } from "./pages/BecomeAMember";
 import { CommunityLeaders } from "./pages/CommunityLeaders";
 import { FaithfulHusbands } from "./pages/FaithfulHusbands";
 import Home from "./pages/Home";
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
       {
         path: "meet-the-mentor",
         element: <MeetTheMentor />,
+        ErrorBoundary: RootErrorBoundary
+      },
+      {
+        path: "join",
+        element: <BecomeAMember />,
         ErrorBoundary: RootErrorBoundary
       },
       {
