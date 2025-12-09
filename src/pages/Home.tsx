@@ -13,9 +13,7 @@ const Home = () => {
       <Pillars />
 
       <section id="blog-post" className="p-10 place-content-center">
-        <h2 className="text-center text-2xl lg:text-5xl mb-10 text-boss-green">
-          See What We've Done
-        </h2>
+        <h2 className="text-center">See What We've Done</h2>
         <div className="grid gap-4 grid-cols-1 lg:grid-cols-3">
           {posts.map((p, idx) => (
             <div key={idx} className="card bg-base-100 w-full shadow-sm">
