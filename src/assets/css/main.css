@@ -5,9 +5,11 @@
 @layer base;
 
 @font-face {
-  font-family: "GoodTimes";
-  src: url("/fonts/good times rg.woff2") format("woff2"),
-    url("/fonts/good times rg.ttf") format("truetype");
+  font-family: "Good Times";
+  src: local("Good Times"), local("GoodTimes"),
+    url("/fonts/good-times-rg.woff2") format("woff2"),
+    url("/fonts/good-times-rg.woff") format("woff"),
+    url("/fonts/good-times-rg.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -49,11 +51,11 @@
 }
 
 h2 {
-  @apply font-good-times;
+  font-family: var(--font-good-times);
 }
 
 p {
-  @apply font-roboto;
+  font-family: var(--font-roboto);
 }
 
 nav li {
@@ -69,7 +71,8 @@ p {
 }
 
 .page-header {
-  @apply lg:text-5xl text-2xl text-right font-good-times;
+  font-family: var(--font-good-times);
+  @apply lg:text-5xl text-2xl text-right;
 }
 
 #about h2 {
