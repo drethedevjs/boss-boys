@@ -73,7 +73,7 @@ p {
 
 .page-header {
   font-family: var(--font-good-times);
-  @apply lg:text-5xl text-2xl text-right;
+  @apply lg:text-5xl text-2xl text-right mb-5 lg:mb-10;
 }
 
 h2 {

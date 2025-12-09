@@ -11,6 +11,7 @@ import { FaithfulHusbands } from "./pages/FaithfulHusbands";
 import Home from "./pages/Home";
 import { LovingFathers } from "./pages/LovingFathers";
 import { MeetTheMentor } from "./pages/MeetTheMentor";
+import { WeeklyRhythm } from "./pages/WeeklyRhythm";
 
 const scrollMiddleware = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
       {
         path: "join",
         element: <BecomeAMember />,
+        ErrorBoundary: RootErrorBoundary
+      },
+      {
+        path: "rhythm",
+        element: <WeeklyRhythm />,
         ErrorBoundary: RootErrorBoundary
       },
       {
