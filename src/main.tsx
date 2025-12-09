@@ -11,6 +11,10 @@ import Home from "./pages/Home";
 import { LovingFathers } from "./pages/LovingFathers";
 import { MeetTheMentor } from "./pages/MeetTheMentor";
 
+const scrollMiddleware = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,17 +38,20 @@ const router = createBrowserRouter([
       {
         path: "pillar/community-leaders",
         element: <CommunityLeaders />,
-        ErrorBoundary: RootErrorBoundary
+        ErrorBoundary: RootErrorBoundary,
+        middleware: [scrollMiddleware]
       },
       {
         path: "pillar/faithful-husbands",
         element: <FaithfulHusbands />,
-        ErrorBoundary: RootErrorBoundary
+        ErrorBoundary: RootErrorBoundary,
+        middleware: [scrollMiddleware]
       },
       {
         path: "pillar/loving-fathers",
         element: <LovingFathers />,
-        ErrorBoundary: RootErrorBoundary
+        ErrorBoundary: RootErrorBoundary,
+        middleware: [scrollMiddleware]
       }
     ]
   }
