@@ -36,20 +36,24 @@ const router = createBrowserRouter([
         ErrorBoundary: RootErrorBoundary
       },
       {
-        path: "pillar/community-leaders",
-        element: <CommunityLeaders />,
-        ErrorBoundary: RootErrorBoundary,
-        middleware: [scrollMiddleware]
-      },
-      {
-        path: "pillar/faithful-husbands",
-        element: <FaithfulHusbands />,
-        ErrorBoundary: RootErrorBoundary,
-        middleware: [scrollMiddleware]
-      },
-      {
-        path: "pillar/loving-fathers",
-        element: <LovingFathers />,
+        path: "pillar",
+        children: [
+          {
+            path: "community-leaders",
+            element: <CommunityLeaders />,
+            ErrorBoundary: RootErrorBoundary
+          },
+          {
+            path: "faithful-husbands",
+            element: <FaithfulHusbands />,
+            ErrorBoundary: RootErrorBoundary
+          },
+          {
+            path: "loving-fathers",
+            element: <LovingFathers />,
+            ErrorBoundary: RootErrorBoundary
+          }
+        ],
         ErrorBoundary: RootErrorBoundary,
         middleware: [scrollMiddleware]
       }
