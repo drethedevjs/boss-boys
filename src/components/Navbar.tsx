@@ -20,14 +20,16 @@ export const Navbar = () => {
     <nav className="">
       <div className="flex items-center justify-between p-5 bg-white dark:bg-boss-green">
         <div className="flex items-center">
-          <img
-            src="/images/boss-logo.png"
-            className="dark:hidden flex w-20 h-full"
-          />
-          <img
-            src="/images/boss-logo-dark.png"
-            className="hidden dark:flex w-20 h-full"
-          />
+          <NavLink to="/">
+            <img
+              src="/images/boss-logo.png"
+              className="dark:hidden flex w-20 h-full"
+            />
+            <img
+              src="/images/boss-logo-dark.png"
+              className="hidden dark:flex w-20 h-full"
+            />
+          </NavLink>
         </div>
 
         {/* Desktop links */}
