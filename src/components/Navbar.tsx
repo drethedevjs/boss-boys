@@ -68,15 +68,14 @@ export const Navbar = () => {
               {l.children?.length ? (
                 <ul className="absolute hidden group-hover:flex flex-col bg-white dark:bg-boss-green shadow-lg rounded mt-0 min-w-max">
                   {l.children.map((child, cidx) => (
-                    <li key={cidx}>
-                      <NavLink
+                                          <NavLink
+key={cidx}
                         to={child.link}
-                        className="block px-4 py-2 hover:text-boss-gold hover:bg-gray-100 dark:hover:bg-opacity-10"
+                        className="block py-2 hover:text-boss-gold dark:hover:bg-opacity-10"
                       >
-                        {child.text}
+<li className="w-full">{child.text}</li>
                       </NavLink>
-                    </li>
-                  ))}
+                                      ))}
                 </ul>
               ) : null}
             </li>
@@ -127,8 +126,8 @@ export const Navbar = () => {
                   {l.children?.length && childOpen ? (
                     <ul className="pl-4 bg-opacity-50 bg-black">
                       {l.children.map((child, cidx) => (
-                        <li key={cidx}>
                           <NavLink
+key={cidx}
                             to={child.link}
                             className="block px-4 py-2 hover:text-boss-gold"
                             onClick={() => {
@@ -136,10 +135,9 @@ export const Navbar = () => {
                               setOpen(false);
                             }}
                           >
-                            {child.text}
+<li>{child.text}</li>
                           </NavLink>
-                        </li>
-                      ))}
+                                              ))}
                     </ul>
                   ) : null}
                 </div>
