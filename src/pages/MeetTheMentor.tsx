@@ -6,6 +6,8 @@ export const MeetTheMentor = () => {
         src="images/andre-headshot.jpg"
         className="rounded-full lg:w-80 lg:h-80 w-40 h-40 drop-shadow-lg object-cover mb-8 mx-auto"
       />
+
+      <h2>Introduction</h2>
       <p>
         Andre Thomas is a software engineer with a deep commitment to his
         community. His involvement with North Augusta Middle School stems from
@@ -21,6 +23,8 @@ export const MeetTheMentor = () => {
         stand up to correct the effects of said legacy then the problem will
         persist or even worsen.
       </p>
+
+      <h2>Past</h2>
       <p>
         By God's grace, in college, Thomas met his first mentor, Curtis Woods,
         who drastically changed his life. He did not meet Curtis through joining
@@ -33,18 +37,14 @@ export const MeetTheMentor = () => {
         and leave, but to be holistically immersed and fully engaged in the
         lives of young men.
       </p>
+
+      <h2>Present</h2>
       <p>
         Thomas is an alumni of Kentucky's HBCU, Kentucky State University (KSU).
-        He graduated with a Bachelor of Arts in Mathematics. During his four
-        years there, he served as a member, team leader, and President of KSU's
-        Baptist Campus Ministry. During his senior year, he served as 1st
-        Attendant to Mr. KSU. He also tutored students in math at KSU's Academic
-        Center for Excellence.
-      </p>
-      <p>
-        Thomas lives in Graniteville, SC with his lovely wife of 10 years and
-        their kids. They together, as the Lord wills, hope to breathe life into
-        the community in which they live.
+        He graduated with a Bachelor of Arts in Mathematics. Today, he lives in
+        Graniteville, SC with his lovely wife of 10 years and their kids. They
+        together, as the Lord wills, hope to breathe life into the community in
+        which they live.
       </p>
     </div>
   );
