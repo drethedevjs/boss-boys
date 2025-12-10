@@ -11,6 +11,7 @@ import { FaithfulHusbands } from "./pages/FaithfulHusbands";
 import Home from "./pages/Home";
 import { LovingFathers } from "./pages/LovingFathers";
 import { MeetTheMentor } from "./pages/MeetTheMentor";
+import { MissionVision } from "./pages/MissionVision";
 import { Pledge } from "./pages/Pledge";
 import { WeeklyRhythm } from "./pages/WeeklyRhythm";
 
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+        ErrorBoundary: RootErrorBoundary
+      },
+      {
+        path: "mission-vision",
+        element: <MissionVision />,
         ErrorBoundary: RootErrorBoundary
       },
       {
