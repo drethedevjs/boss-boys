@@ -11,6 +11,7 @@ import { FaithfulHusbands } from "./pages/FaithfulHusbands";
 import Home from "./pages/Home";
 import { LovingFathers } from "./pages/LovingFathers";
 import { MeetTheMentor } from "./pages/MeetTheMentor";
+import { Pledge } from "./pages/Pledge";
 import { WeeklyRhythm } from "./pages/WeeklyRhythm";
 
 const scrollMiddleware = () => {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    middleware: [scrollMiddleware],
     children: [
       {
         index: true,
@@ -48,6 +50,11 @@ const router = createBrowserRouter([
         ErrorBoundary: RootErrorBoundary
       },
       {
+        path: "pledge",
+        element: <Pledge />,
+        ErrorBoundary: RootErrorBoundary
+      },
+      {
         path: "pillar",
         children: [
           {
@@ -66,8 +73,7 @@ const router = createBrowserRouter([
             ErrorBoundary: RootErrorBoundary
           }
         ],
-        ErrorBoundary: RootErrorBoundary,
-        middleware: [scrollMiddleware]
+        ErrorBoundary: RootErrorBoundary
       }
     ]
   }
