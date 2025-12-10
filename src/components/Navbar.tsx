@@ -1,13 +1,27 @@
-import { Menu } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react";
 import { useState } from "react";
 import { NavLink } from "react-router";
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [childOpen, setChildOpen] = useState(false);
 
   const links = [
     { link: "/", text: "Home" },
-    { link: "/about", text: "About" },
+    {
+      link: "/about",
+      text: "About",
+      children: [
+        {
+          link: "/join",
+          text: "Become A Member"
+        },
+        {
+          link: "/rhythm",
+          text: "Weekly Rhythm"
+        }
+      ]
+    },
     { link: "/meet-the-mentor", text: "Meet the Mentor" },
     {
       link: "https://www.paypal.com/donate/?hosted_button_id=B8HFHLRW86GEY",
@@ -35,9 +49,37 @@ export const Navbar = () => {
         {/* Desktop links */}
         <ul className="hidden md:flex w-full justify-end space-x-6 font-good-times">
           {links.map((l, idx) => (
-            <NavLink to={l.link} key={idx} end>
-              <li className="hover:text-boss-gold">{l.text}</li>
-            </NavLink>
+            <li
+              key={idx}
+              className={l.children?.length ? "relative group" : ""}
+            >
+              <div className="flex items-center gap-2">
+                <NavLink
+                  to={l.link}
+                  end
+                  className="hover:text-boss-gold block py-2"
+                >
+                  {l.text}
+                </NavLink>
+                {l.children?.length ? (
+                  <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform" />
+                ) : null}
+              </div>
+              {l.children?.length ? (
+                <ul className="absolute hidden group-hover:flex flex-col bg-white dark:bg-boss-green shadow-lg rounded mt-0 min-w-max">
+                  {l.children.map((child, cidx) => (
+                    <li key={cidx}>
+                      <NavLink
+                        to={child.link}
+                        className="block px-4 py-2 hover:text-boss-gold hover:bg-gray-100 dark:hover:bg-opacity-10"
+                      >
+                        {child.text}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
+            </li>
           ))}
         </ul>
 
@@ -56,17 +98,53 @@ export const Navbar = () => {
       {open && (
         <div className="md:hidden absolute bg-boss-green w-full text-white dark:text-boss-gold z-10">
           <ul className="flex flex-col space-y-2 font-good-times">
-            {links.map((l, idx) => (
-              <NavLink
-                to={l.link}
-                end
-                key={idx}
-                className="border-b-boss-gold! border-b-2"
-                onClick={() => setOpen(v => !v)}
-              >
-                <li className="hover:text-boss-gold">{l.text}</li>
-              </NavLink>
-            ))}
+            {links.map((l, idx) => {
+              return (
+                <div key={idx}>
+                  <div className="flex items-center justify-between">
+                    <NavLink
+                      to={l.link}
+                      end
+                      className="border-b-2 border-b-boss-gold block px-4 py-2 hover:text-boss-gold flex-1"
+                      onClick={() => !l.children?.length && setOpen(false)}
+                    >
+                      {l.text}
+                    </NavLink>
+                    {l.children?.length ? (
+                      <button
+                        onClick={() => setChildOpen(!childOpen)}
+                        className="px-4 py-2"
+                        aria-expanded={childOpen}
+                      >
+                        <ChevronDown
+                          className={`w-4 h-4 transition-transform ${
+                            childOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                    ) : null}
+                  </div>
+                  {l.children?.length && childOpen ? (
+                    <ul className="pl-4 bg-opacity-50 bg-black">
+                      {l.children.map((child, cidx) => (
+                        <li key={cidx}>
+                          <NavLink
+                            to={child.link}
+                            className="block px-4 py-2 hover:text-boss-gold"
+                            onClick={() => {
+                              setChildOpen(false);
+                              setOpen(false);
+                            }}
+                          >
+                            {child.text}
+                          </NavLink>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
+                </div>
+              );
+            })}
           </ul>
         </div>
       )}
