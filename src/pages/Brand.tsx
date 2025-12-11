@@ -10,6 +10,9 @@ export const Brand = () => {
   const [secondaryCopied, setSecondaryCopied] = useState<Boolean>(false);
   const [pathToFile, setPathToFile] = useState<string>("");
   const [fileName, setFileName] = useState<string>("");
+  const modalElement = document.getElementById(
+    "download-modal"
+  ) as HTMLDialogElement;
 
   const writeToClipboard = async (
     text: string,
@@ -32,11 +35,11 @@ export const Brand = () => {
   const showModal = (fileName: string, filePath: string) => {
     setPathToFile(filePath);
     setFileName(fileName);
-    document.getElementById("download-modal")?.showModal();
+    modalElement?.showModal();
   };
 
   const hideModal = () => {
-    document.getElementById("download-modal")?.close();
+    modalElement?.close();
   };
 
   const logoImages = [
