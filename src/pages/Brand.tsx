@@ -4,6 +4,7 @@ import { createPortal } from "react-dom";
 import "../assets/css/brand.css";
 import { BossPage } from "../components/BossPage";
 import { DownloadModal } from "../components/modals/DownloadModal";
+import { hideModal, showModal } from "../utils/download";
 
 export const Brand = () => {
   const [primaryCopied, setPrimaryCopied] = useState<Boolean>(false);
@@ -29,14 +30,10 @@ export const Brand = () => {
     }
   };
 
-  const showModal = (fileName: string, filePath: string) => {
+  const showDownloadModal = (fileName: string, filePath: string) => {
     setPathToFile(filePath);
     setFileName(fileName);
-    document.getElementById("download-modal")?.showModal();
-  };
-
-  const hideModal = () => {
-    document.getElementById("download-modal")?.close();
+    showModal();
   };
 
   const logoImages = [
@@ -92,7 +89,10 @@ export const Brand = () => {
       <ul className="ml-5">
         <div
           onClick={() =>
-            showModal("Good Times woff2 font file", "fonts/good-times-rg.woff2")
+            showDownloadModal(
+              "Good Times woff2 font file",
+              "fonts/good-times-rg.woff2"
+            )
           }
         >
           <li>
@@ -102,7 +102,10 @@ export const Brand = () => {
         </div>
         <div
           onClick={() =>
-            showModal("Good Times woff font file", "fonts/good-times-rg.woff")
+            showDownloadModal(
+              "Good Times woff font file",
+              "fonts/good-times-rg.woff"
+            )
           }
         >
           <li>
@@ -112,7 +115,10 @@ export const Brand = () => {
         </div>
         <div
           onClick={() =>
-            showModal("Good Times ttf font file", "fonts/good-times-rg.ttf")
+            showDownloadModal(
+              "Good Times ttf font file",
+              "fonts/good-times-rg.ttf"
+            )
           }
         >
           <li>
@@ -137,7 +143,7 @@ export const Brand = () => {
         {logoImages.map((image, idx) => (
           <div
             key={idx}
-            onClick={() => showModal("logo", image.path)}
+            onClick={() => showDownloadModal("logo", image.path)}
             className="ring-1 hover:ring-boss-gold inset-shadow-2xs rounded-md lg:w-full"
           >
             <img
