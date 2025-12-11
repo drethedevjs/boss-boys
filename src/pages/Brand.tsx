@@ -1,11 +1,15 @@
 import { Copy, Download, Link } from "lucide-react";
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import "../assets/css/brand.css";
 import { BossPage } from "../components/BossPage";
+import { DownloadModal } from "../components/modals/DownloadModal";
 
 export const Brand = () => {
   const [primaryCopied, setPrimaryCopied] = useState<Boolean>(false);
   const [secondaryCopied, setSecondaryCopied] = useState<Boolean>(false);
+  const [pathToFile, setPathToFile] = useState<string>("");
+  const [fileName, setFileName] = useState<string>("");
 
   const writeToClipboard = async (
     text: string,
@@ -23,6 +27,16 @@ export const Brand = () => {
     } catch (err) {
       console.error("Failed to copy to clipboard:", err);
     }
+  };
+
+  const showModal = (fileName: string, filePath: string) => {
+    setPathToFile(filePath);
+    setFileName(fileName);
+    document.getElementById("download-modal")?.showModal();
+  };
+
+  const hideModal = () => {
+    document.getElementById("download-modal")?.close();
   };
 
   const logoImages = [
@@ -76,24 +90,36 @@ export const Brand = () => {
       <h3>Main</h3>
       <p>Good Times Font</p>
       <ul className="ml-5">
-        <a href="fonts/good-times-rg.woff2" download>
+        <div
+          onClick={() =>
+            showModal("Good Times woff2 font file", "fonts/good-times-rg.woff2")
+          }
+        >
           <li>
             Good Times (woff2)
             <Download />
           </li>
-        </a>
-        <a href="fonts/good-times-rg.woff" download>
+        </div>
+        <div
+          onClick={() =>
+            showModal("Good Times woff font file", "fonts/good-times-rg.woff")
+          }
+        >
           <li>
             Good Times (woff)
             <Download />
           </li>
-        </a>
-        <a href="fonts/good-times-rg.ttf" download>
+        </div>
+        <div
+          onClick={() =>
+            showModal("Good Times ttf font file", "fonts/good-times-rg.ttf")
+          }
+        >
           <li>
             Good Times (ttf)
             <Download />
           </li>
-        </a>
+        </div>
       </ul>
 
       <h3>Secondary</h3>
@@ -109,19 +135,26 @@ export const Brand = () => {
       <h3>Transparent Background</h3>
       <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
         {logoImages.map((image, idx) => (
-          <a
+          <div
             key={idx}
-            href={image.path}
-            download
+            onClick={() => showModal("logo", image.path)}
             className="ring-1 hover:ring-boss-gold inset-shadow-2xs rounded-md lg:w-full"
           >
             <img
               src={image.path}
               className="hover:scale-105 hover:rotate-1 transition-all"
             />
-          </a>
+          </div>
         ))}
       </div>
+      {createPortal(
+        <DownloadModal
+          link={pathToFile}
+          fileName={fileName}
+          onClose={() => hideModal()}
+        />,
+        document.body
+      )}
     </BossPage>
   );
 };
