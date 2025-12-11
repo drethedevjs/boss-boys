@@ -92,7 +92,7 @@ export const Brand = () => {
       <h2>Typography</h2>
       <h3>Main</h3>
       <p>Good Times Font</p>
-      <ul className="ml-5">
+      <ul id="font-list" className="ml-5">
         <div
           onClick={() =>
             showModal("Good Times woff2 font file", "fonts/good-times-rg.woff2")
