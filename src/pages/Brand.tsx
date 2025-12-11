@@ -107,13 +107,13 @@ export const Brand = () => {
 
       <h2>Logos</h2>
       <h3>Transparent Background</h3>
-      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+      <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
         {logoImages.map((image, idx) => (
           <a
             key={idx}
             href={image.path}
             download
-            className="ring-1 hover:ring-boss-gold inset-shadow-2xs rounded-md"
+            className="ring-1 hover:ring-boss-gold inset-shadow-2xs rounded-md lg:w-full"
           >
             <img
               src={image.path}
