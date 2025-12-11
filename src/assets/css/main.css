@@ -51,6 +51,14 @@
   @apply py-3 px-5 rounded-md;
 }
 
+.boss-btn-green {
+  @apply text-white ring-1 ring-boss-green bg-boss-green hover:bg-white hover:text-boss-green transition-all;
+}
+
+.boss-btn-error {
+  @apply ring-1 ring-error bg-error hover:bg-white transition-all;
+}
+
 h2 {
   font-family: var(--font-good-times);
 }
