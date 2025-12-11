@@ -1,0 +1,5 @@
+@reference "./main.css";
+
+li {
+  @apply flex rounded-md ring-boss-green p-4 max-w-sm justify-between hover:ring-1 dark:hover:ring-white;
+}

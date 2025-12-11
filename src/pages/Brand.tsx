@@ -1,0 +1,127 @@
+import { Copy, Download, Link } from "lucide-react";
+import { useState } from "react";
+import "../assets/css/brand.css";
+import { BossPage } from "../components/BossPage";
+
+export const Brand = () => {
+  const [primaryCopied, setPrimaryCopied] = useState<Boolean>(false);
+  const [secondaryCopied, setSecondaryCopied] = useState<Boolean>(false);
+
+  const writeToClipboard = async (
+    text: string,
+    setCopiedFunc: React.Dispatch<React.SetStateAction<Boolean>>
+  ) => {
+    try {
+      setCopiedFunc(true);
+      await navigator.clipboard.writeText(text);
+
+      console.info("Copied to clipboard!");
+
+      setTimeout(() => {
+        setCopiedFunc(false);
+      }, 3000);
+    } catch (err) {
+      console.error("Failed to copy to clipboard:", err);
+    }
+  };
+
+  const logoImages = [
+    {
+      path: "logos/full-abbr-logo.png"
+    },
+    {
+      path: "logos/full-logo.png"
+    },
+    {
+      path: "logos/simple-green-logo.png"
+    },
+    {
+      path: "images/boss-logo-dark.png"
+    },
+    {
+      path: "images/boss-logo.png"
+    }
+  ];
+
+  return (
+    <BossPage header="Brand">
+      <h2>Colors</h2>
+      <h3>Main</h3>
+      <div
+        onClick={() => writeToClipboard("#222B21", setPrimaryCopied)}
+        className="flex bg-boss-green justify-between place-items-center p-4 rounded-lg mb-5"
+      >
+        <p className="text-white! mb-0!">Dark Olive: #222B21</p>
+        {primaryCopied ? (
+          <span className="animate-bounce text-white">Copied!</span>
+        ) : (
+          <Copy className="text-white" />
+        )}
+      </div>
+
+      <h3>Secondary</h3>
+      <div
+        onClick={() => writeToClipboard("#BF7507", setSecondaryCopied)}
+        className="flex bg-boss-gold justify-between place-items-center p-4 rounded-lg mb-10"
+      >
+        <p className="text-white! mb-0!">Dark Goldenrod: #BF7507</p>
+        {secondaryCopied ? (
+          <span className="animate-bounce text-white">Copied!</span>
+        ) : (
+          <Copy className="text-white" />
+        )}
+      </div>
+
+      <h2>Typography</h2>
+      <h3>Main</h3>
+      <p>Good Times Font</p>
+      <ul className="ml-5">
+        <a href="fonts/good-times-rg.woff2" download>
+          <li>
+            Good Times (woff2)
+            <Download />
+          </li>
+        </a>
+        <a href="fonts/good-times-rg.woff" download>
+          <li>
+            Good Times (woff)
+            <Download />
+          </li>
+        </a>
+        <a href="fonts/good-times-rg.ttf" download>
+          <li>
+            Good Times (ttf)
+            <Download />
+          </li>
+        </a>
+      </ul>
+
+      <h3>Secondary</h3>
+      <a
+        className="flex space-x-5 place-items-center mb-10"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      >
+        <p className="mb-0!">Roboto Font</p>
+        <Link />
+      </a>
+
+      <h2>Logos</h2>
+      <h3>Transparent Background</h3>
+      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+        {logoImages.map((image, idx) => (
+          <a
+            key={idx}
+            href={image.path}
+            download
+            className="ring-1 hover:ring-boss-gold inset-shadow-2xs rounded-md"
+          >
+            <img
+              src={image.path}
+              className="hover:scale-105 hover:rotate-1 transition-all"
+            />
+          </a>
+        ))}
+      </div>
+    </BossPage>
+  );
+};

@@ -6,6 +6,7 @@ import { RootErrorBoundary } from "./components/RootErrorBoundary";
 import RootLayout from "./layouts/RootLayout";
 import { About } from "./pages/About";
 import { BecomeAMember } from "./pages/BecomeAMember";
+import { Brand } from "./pages/Brand";
 import { CommunityLeaders } from "./pages/CommunityLeaders";
 import { FaithfulHusbands } from "./pages/FaithfulHusbands";
 import Home from "./pages/Home";
@@ -24,59 +25,54 @@ const router = createBrowserRouter([
     path: "/",
     element: <RootLayout />,
     middleware: [scrollMiddleware],
+    ErrorBoundary: RootErrorBoundary,
     children: [
       {
         index: true,
-        element: <Home />,
-        ErrorBoundary: RootErrorBoundary
+        element: <Home />
       },
       {
         path: "about",
-        element: <About />,
-        ErrorBoundary: RootErrorBoundary
+        element: <About />
       },
       {
         path: "mission-vision",
-        element: <MissionVision />,
-        ErrorBoundary: RootErrorBoundary
+        element: <MissionVision />
+      },
+      {
+        path: "brand",
+        element: <Brand />
       },
       {
         path: "meet-the-mentor",
-        element: <MeetTheMentor />,
-        ErrorBoundary: RootErrorBoundary
+        element: <MeetTheMentor />
       },
       {
         path: "join",
-        element: <BecomeAMember />,
-        ErrorBoundary: RootErrorBoundary
+        element: <BecomeAMember />
       },
       {
         path: "rhythm",
-        element: <WeeklyRhythm />,
-        ErrorBoundary: RootErrorBoundary
+        element: <WeeklyRhythm />
       },
       {
         path: "pledge",
-        element: <Pledge />,
-        ErrorBoundary: RootErrorBoundary
+        element: <Pledge />
       },
       {
         path: "pillar",
         children: [
           {
             path: "community-leaders",
-            element: <CommunityLeaders />,
-            ErrorBoundary: RootErrorBoundary
+            element: <CommunityLeaders />
           },
           {
             path: "faithful-husbands",
-            element: <FaithfulHusbands />,
-            ErrorBoundary: RootErrorBoundary
+            element: <FaithfulHusbands />
           },
           {
             path: "loving-fathers",
-            element: <LovingFathers />,
-            ErrorBoundary: RootErrorBoundary
+            element: <LovingFathers />
           }
         ],
         ErrorBoundary: RootErrorBoundary
