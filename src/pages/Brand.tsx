@@ -4,61 +4,20 @@ import { createPortal } from "react-dom";
 import "../assets/css/brand.css";
 import { BossPage } from "../components/BossPage";
 import { DownloadModal } from "../components/modals/DownloadModal";
+import { logoImages } from "../data/logoImages";
+import { hideModal, showModal, writeToClipboard } from "../utils/global";
 
 export const Brand = () => {
   const [primaryCopied, setPrimaryCopied] = useState<Boolean>(false);
   const [secondaryCopied, setSecondaryCopied] = useState<Boolean>(false);
   const [pathToFile, setPathToFile] = useState<string>("");
   const [fileName, setFileName] = useState<string>("");
-  const modalElement = document.getElementById(
-    "download-modal"
-  ) as HTMLDialogElement;
 
-  const writeToClipboard = async (
-    text: string,
-    setCopiedFunc: React.Dispatch<React.SetStateAction<Boolean>>
-  ) => {
-    try {
-      setCopiedFunc(true);
-      await navigator.clipboard.writeText(text);
-
-      console.info("Copied to clipboard!");
-
-      setTimeout(() => {
-        setCopiedFunc(false);
-      }, 3000);
-    } catch (err) {
-      console.error("Failed to copy to clipboard:", err);
-    }
-  };
-
-  const showModal = (fileName: string, filePath: string) => {
+  const showDownloadModal = (fileName: string, filePath: string) => {
     setPathToFile(filePath);
     setFileName(fileName);
-    modalElement?.showModal();
+    showModal();
   };
-
-  const hideModal = () => {
-    modalElement?.close();
-  };
-
-  const logoImages = [
-    {
-      path: "logos/full-abbr-logo.png"
-    },
-    {
-      path: "logos/full-logo.png"
-    },
-    {
-      path: "logos/simple-green-logo.png"
-    },
-    {
-      path: "images/boss-logo-dark.png"
-    },
-    {
-      path: "images/boss-logo.png"
-    }
-  ];
 
   return (
     <BossPage header="Brand">
@@ -95,7 +54,10 @@ export const Brand = () => {
       <ul id="font-list" className="ml-5">
         <div
           onClick={() =>
-            showModal("Good Times woff2 font file", "fonts/good-times-rg.woff2")
+            showDownloadModal(
+              "Good Times woff2 font file",
+              "fonts/good-times-rg.woff2"
+            )
           }
         >
           <li>
@@ -105,7 +67,10 @@ export const Brand = () => {
         </div>
         <div
           onClick={() =>
-            showModal("Good Times woff font file", "fonts/good-times-rg.woff")
+            showDownloadModal(
+              "Good Times woff font file",
+              "fonts/good-times-rg.woff"
+            )
           }
         >
           <li>
@@ -115,7 +80,10 @@ export const Brand = () => {
         </div>
         <div
           onClick={() =>
-            showModal("Good Times ttf font file", "fonts/good-times-rg.ttf")
+            showDownloadModal(
+              "Good Times ttf font file",
+              "fonts/good-times-rg.ttf"
+            )
           }
         >
           <li>
@@ -140,7 +108,7 @@ export const Brand = () => {
         {logoImages.map((image, idx) => (
           <div
             key={idx}
-            onClick={() => showModal("logo", image.path)}
+            onClick={() => showDownloadModal("logo", image.path)}
             className="ring-1 hover:ring-boss-gold inset-shadow-2xs rounded-md lg:w-full"
           >
             <img
