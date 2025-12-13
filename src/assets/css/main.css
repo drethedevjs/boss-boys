@@ -47,16 +47,24 @@
   --color-neutral-900: #0d0c0a;
 }
 
+:root {
+  --nav-height: 112px;
+}
+
 .boss-btn {
-  @apply py-3 px-5 rounded-md;
+  @apply py-3 px-5 rounded-md transition-all;
 }
 
 .boss-btn-green {
-  @apply text-white ring-1 ring-boss-green bg-boss-green hover:bg-white hover:text-boss-green transition-all;
+  @apply text-white ring-1 ring-boss-green bg-boss-green hover:bg-white hover:text-boss-green;
+}
+
+.boss-btn-gold {
+  @apply text-white ring-1 ring-boss-gold bg-boss-gold hover:bg-transparent hover:text-boss-gold;
 }
 
 .boss-btn-error {
-  @apply ring-1 ring-error bg-error hover:bg-white transition-all;
+  @apply ring-1 ring-error bg-error hover:bg-white;
 }
 
 h2 {
