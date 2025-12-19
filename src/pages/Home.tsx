@@ -3,10 +3,6 @@ import Pillars from "../components/Pillars";
 import posts from "../data/posts";
 
 const Home = () => {
-  const truncate = (str: string, maxLength: number) => {
-    return str.length <= maxLength ? str : str.slice(0, maxLength) + "...";
-  };
-
   return (
     <>
       <Hero />
