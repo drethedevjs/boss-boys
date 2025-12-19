@@ -24,7 +24,7 @@ const Pillars = () => {
   ];
 
   return (
-    <section id="pillars" className="p-20 place-items-center">
+    <section id="pillars" className="lg:p-20 p-10 place-items-center">
       <h2 className="lg:text-6xl text-5xl pb-10 font-good-times text-center">
         Our Pillars
       </h2>

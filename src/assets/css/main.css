@@ -93,7 +93,7 @@ p {
 }
 
 h2 {
-  @apply text-xl lg:text-4xl lg:mb-5 mb-3;
+  @apply text-2xl lg:text-4xl mb-5;
 }
 
 h3 {
