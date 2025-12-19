@@ -13,26 +13,26 @@ const Home = () => {
       <Pillars />
 
       <section id="blog-post" className="p-10 place-content-center">
-        <h2 className="text-center">See What We've Done</h2>
+        <h2 className="text-center mb-10!">See What We've Done</h2>
         <div className="grid gap-4 grid-cols-1 lg:grid-cols-3">
           {posts.map((p, idx) => (
-            <div key={idx} className="card bg-base-100 w-full shadow-sm">
-              <figure className="px-10 pt-10">
-                <img
-                  src={
-                    p.imgSrc ||
-                    "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  }
-                  alt="Shoes"
-                  className="rounded-xl hover:scale-105 transition-all max-h-40 object-fill"
-                />
+            <div
+              key={idx}
+              className="card bg-base-100 shadow-sm border-boss-gold dark:border"
+            >
+              <figure className="h-52">
+                <img className="object-fill" src={p.imgSrc} alt="Shoes" />
               </figure>
-              <div className="card-body items-center text-center">
-                <h3 className="card-title">{p.title}</h3>
-                <p>{p.blurb || truncate(p.content[0], 100)}</p>
-                {/* <button className="boss-btn bg-boss-gold text-white">
-                  Read
-                </button> */}
+              <div className="card-body">
+                <h2 className="card-title">
+                  {p.title}
+                  {/* <div className="badge badge-secondary">NEW</div> */}
+                </h2>
+                <p className="text-xl!">{p.blurb}</p>
+                <div className="card-actions justify-end hidden">
+                  <div className="badge badge-outline">Fashion</div>
+                  <div className="badge badge-outline">Products</div>
+                </div>
               </div>
             </div>
           ))}
