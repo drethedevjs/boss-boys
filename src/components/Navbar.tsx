@@ -109,7 +109,7 @@ export const Navbar = () => {
                       to={l.link}
                       end
                       className="border-b-2 border-b-boss-gold block px-4 py-2 hover:text-boss-gold flex-1"
-                      onClick={() => !l.children?.length && setOpen(false)}
+                      onClick={() => setOpen(false)}
                     >
                       {l.text}
                     </NavLink>
