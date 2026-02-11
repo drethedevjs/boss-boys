@@ -13,13 +13,13 @@ export const MissionVision = () => {
 
       <h2>Vision</h2>
       <p>
-        We mourn the plight African American boys. We desire to see a major
-        change in the way they see themselves and the world around him.
+        Our chief desire is for black boys to see themselves and the world
+        around him in a more positive way.
       </p>
       <p>
-        We desire to see black communities where black men are mentoring boys of
-        color and where, eventually, it will be common to see fathers mentoring
-        their own sons.
+        We desire to see black communities where black men are mentoring black
+        boys and where, eventually, it will be more common to see fathers
+        mentoring their own sons.
       </p>
       <p>
         We desire to see our boys view education as having immense value and for

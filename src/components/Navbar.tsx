@@ -23,6 +23,10 @@ export const Navbar = () => {
         {
           link: "/pledge",
           text: "Our Pledge"
+        },
+        {
+          link: "/mission-vision",
+          text: "Mission & Vision"
         }
       ]
     },
