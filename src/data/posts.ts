@@ -68,6 +68,42 @@ const posts = [
       "Amet ad cupidatat tempor nisi ut do. Non reprehenderit deserunt magna aliquip ullamco tempor veniam minim aliqua et. Nisi ut magna ullamco officia Lorem consectetur nulla enim sint exercitation culpa exercitation qui. Cupidatat est laborum adipisicing aliquip ea duis pariatur pariatur culpa aliqua. Nisi sunt do fugiat minim culpa ad ut sunt. Officia consectetur Lorem laboris laborum occaecat consequat ex enim culpa pariatur ut consequat reprehenderit."
     ],
     highlight: true
+  },
+  {
+    title: "Canvasing for Volunteers",
+    imgSrc: "/images/community-service/kroger-volunteer-signup.jpg",
+    date: "3/2/2022",
+    blurb:
+      "We went out into the commiunity to get locals to register to be volunteers in the school district.",
+    content: [
+      "Et ea ad et dolor officia occaecat sint commodo ea exercitation non id sit. Do laboris velit qui ex mollit aliqua. Officia irure ipsum amet deserunt aute et labore dolore magna consectetur elit aliquip. Voluptate ad elit incididunt duis aliquip sit occaecat. Sint adipisicing aliquip irure amet id ea consequat minim quis amet irure reprehenderit. Cillum proident officia elit elit deserunt anim aliqua ex dolor consequat laboris irure magna. Ad sint aliquip qui qui.",
+      "Amet ad cupidatat tempor nisi ut do. Non reprehenderit deserunt magna aliquip ullamco tempor veniam minim aliqua et. Nisi ut magna ullamco officia Lorem consectetur nulla enim sint exercitation culpa exercitation qui. Cupidatat est laborum adipisicing aliquip ea duis pariatur pariatur culpa aliqua. Nisi sunt do fugiat minim culpa ad ut sunt. Officia consectetur Lorem laboris laborum occaecat consequat ex enim culpa pariatur ut consequat reprehenderit."
+    ],
+    highlight: true
+  },
+  {
+    title: "Mossy Creek Visit",
+    imgSrc: "/images/school-visit.jpg",
+    date: "3/2/2022",
+    blurb:
+      "Our students paid a visit to Mossy Creek to connect with the students. They did a Q&A with the 5th graders and read to the 1st graders.",
+    content: [
+      "Et ea ad et dolor officia occaecat sint commodo ea exercitation non id sit. Do laboris velit qui ex mollit aliqua. Officia irure ipsum amet deserunt aute et labore dolore magna consectetur elit aliquip. Voluptate ad elit incididunt duis aliquip sit occaecat. Sint adipisicing aliquip irure amet id ea consequat minim quis amet irure reprehenderit. Cillum proident officia elit elit deserunt anim aliqua ex dolor consequat laboris irure magna. Ad sint aliquip qui qui.",
+      "Amet ad cupidatat tempor nisi ut do. Non reprehenderit deserunt magna aliquip ullamco tempor veniam minim aliqua et. Nisi ut magna ullamco officia Lorem consectetur nulla enim sint exercitation culpa exercitation qui. Cupidatat est laborum adipisicing aliquip ea duis pariatur pariatur culpa aliqua. Nisi sunt do fugiat minim culpa ad ut sunt. Officia consectetur Lorem laboris laborum occaecat consequat ex enim culpa pariatur ut consequat reprehenderit."
+    ],
+    highlight: true
+  },
+  {
+    title: "Local News Station",
+    imgSrc: "/images/news-station.jpg",
+    date: "3/2/2022",
+    blurb:
+      "We got to tour WRDW's news station to learn about other career opportunities that our boys might be interested in.",
+    content: [
+      "Et ea ad et dolor officia occaecat sint commodo ea exercitation non id sit. Do laboris velit qui ex mollit aliqua. Officia irure ipsum amet deserunt aute et labore dolore magna consectetur elit aliquip. Voluptate ad elit incididunt duis aliquip sit occaecat. Sint adipisicing aliquip irure amet id ea consequat minim quis amet irure reprehenderit. Cillum proident officia elit elit deserunt anim aliqua ex dolor consequat laboris irure magna. Ad sint aliquip qui qui.",
+      "Amet ad cupidatat tempor nisi ut do. Non reprehenderit deserunt magna aliquip ullamco tempor veniam minim aliqua et. Nisi ut magna ullamco officia Lorem consectetur nulla enim sint exercitation culpa exercitation qui. Cupidatat est laborum adipisicing aliquip ea duis pariatur pariatur culpa aliqua. Nisi sunt do fugiat minim culpa ad ut sunt. Officia consectetur Lorem laboris laborum occaecat consequat ex enim culpa pariatur ut consequat reprehenderit."
+    ],
+    highlight: true
   }
 ];
 
