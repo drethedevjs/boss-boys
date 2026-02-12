@@ -14,18 +14,18 @@ export const files = [
     title: "Discussion Guide Template",
     description:
       "This is a template to help 8th graders create a discussion that they will facilitate with the other BOSS members.",
-    fileName: "discussion-guide.pdf"
+    fileName: "discussion-guide-template.pdf"
   },
   {
     title: "Official Application",
     description:
       "This is the application that all BOSS members must have their guardians fill out.",
-    fileName: "discussion-guide.pdf"
+    fileName: "application.pdf"
   },
   {
     title: "NAM Volunteer Application",
     description:
       "This application will allow locals to register themselves with the school district.",
-    fileName: "discussion-guide.pdf"
+    fileName: "nam-volunteer-application.pdf"
   }
 ];

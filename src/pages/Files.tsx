@@ -18,7 +18,8 @@ export const Files = () => {
                     <a
                       href={`/files/${f.fileName}`}
                       className="boss-btn boss-btn-color"
-                      download
+                      rel="noopener noreferrer"
+                      target="_blank"
                     >
                       Download
                     </a>

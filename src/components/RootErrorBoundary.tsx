@@ -1,8 +1,18 @@
-import { isRouteErrorResponse, NavLink, useRouteError } from "react-router";
+import {
+  isRouteErrorResponse,
+  NavLink,
+  useNavigate,
+  useRouteError
+} from "react-router";
 import { Navbar } from "./Navbar";
 
 export const RootErrorBoundary = () => {
   let error = useRouteError();
+  const navigate = useNavigate();
+  const handleBack = () => {
+    window.history.length > 1 ? navigate(-1) : navigate("/"); // fallback route
+  };
+
   if (isRouteErrorResponse(error)) {
     return (
       <>
@@ -12,12 +22,21 @@ export const RootErrorBoundary = () => {
             <h1 className="lg:text-9xl text-6xl font-bold">{error.status}</h1>
             <h2>{error.statusText}</h2>
             <p>{error.data}</p>
-            <NavLink
-              to="/"
-              className="boss-btn text-white ring-1 ring-boss-green bg-boss-green hover:bg-white hover:text-boss-green dark:ring-boss-gold dark:bg-boss-gold dark:hover:bg-transparent dark:hover:text-boss-gold"
-            >
-              Go Back Home
-            </NavLink>
+            <div className="grid gap-4 grid-cols-2">
+              <NavLink
+                to="/"
+                onClick={handleBack}
+                className="boss-btn text-white ring-1 ring-boss-green bg-boss-green hover:bg-white hover:text-boss-green dark:ring-boss-gold dark:bg-boss-gold dark:hover:bg-transparent dark:hover:text-boss-gold hover:font-semibold"
+              >
+                Go Back
+              </NavLink>
+              <NavLink
+                to="/"
+                className="boss-btn text-white ring-1 ring-boss-green bg-boss-green hover:bg-white hover:text-boss-green dark:ring-boss-gold dark:bg-boss-gold dark:hover:bg-transparent dark:hover:text-boss-gold hover:font-semibold"
+              >
+                Home
+              </NavLink>
+            </div>
           </div>
         </div>
       </>
