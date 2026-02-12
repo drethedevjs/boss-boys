@@ -6,7 +6,9 @@
 
 @font-face {
   font-family: "Good Times";
-  src: local("Good Times"), local("GoodTimes"),
+  src:
+    local("Good Times"),
+    local("GoodTimes"),
     url("/fonts/good-times-rg.woff2") format("woff2"),
     url("/fonts/good-times-rg.woff") format("woff"),
     url("/fonts/good-times-rg.ttf") format("truetype");
@@ -57,6 +59,10 @@
 
 .boss-btn-green {
   @apply text-white ring-1 ring-boss-green bg-boss-green hover:bg-white hover:text-boss-green;
+}
+
+.boss-btn-color {
+  @apply text-white ring-1 ring-boss-green bg-boss-green hover:bg-transparent hover:font-semibold hover:text-boss-green dark:ring-boss-gold dark:bg-boss-gold dark:hover:text-boss-gold;
 }
 
 .boss-btn-gold {

@@ -9,6 +9,7 @@ import { BecomeAMember } from "./pages/BecomeAMember";
 import { Brand } from "./pages/Brand";
 import { CommunityLeaders } from "./pages/CommunityLeaders";
 import { FaithfulHusbands } from "./pages/FaithfulHusbands";
+import { Files } from "./pages/Files";
 import Home from "./pages/Home";
 import { LovingFathers } from "./pages/LovingFathers";
 import { MeetTheMentor } from "./pages/MeetTheMentor";
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "mission-vision",
         element: <MissionVision />
+      },
+      {
+        path: "files",
+        element: <Files />
       },
       {
         path: "brand",
