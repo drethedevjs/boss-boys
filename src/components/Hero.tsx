@@ -19,18 +19,18 @@ const Hero = () => {
             fathers.
           </p>
           <div className="space-x-5 font-medium">
-            <NavLink to="/about">
-              <button className="boss-btn-gold boss-btn hover:font-semibold">
-                Learn More
-              </button>
+            <NavLink
+              to="/about"
+              className="boss-btn-gold boss-btn hover:font-semibold"
+            >
+              Learn More
             </NavLink>
             <NavLink
               to="https://www.paypal.com/donate/?hosted_button_id=B8HFHLRW86GEY"
               target="_blank"
+              className="boss-btn-green boss-btn hover:font-semibold"
             >
-              <button className="boss-btn-green boss-btn hover:font-semibold">
-                Donate
-              </button>
+              Donate
             </NavLink>
           </div>
         </div>

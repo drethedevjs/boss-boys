@@ -45,7 +45,7 @@ const Pillars = () => {
               </div>
               <NavLink
                 to={p.link}
-                className="boss-btn bg-boss-green dark:bg-boss-gold text-white"
+                className="boss-btn bg-boss-green ring-1 ring-boss-green dark:ring-boss-gold hover:font-semibold dark:bg-boss-gold dark:hover:bg-transparent text-white"
               >
                 Learn More
               </NavLink>
