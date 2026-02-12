@@ -21,7 +21,7 @@ const Home = () => {
             >
               <figure>
                 <img
-                  className="object-cover h-52 w-full"
+                  className="object-cover h-52 md:h-64 w-full"
                   src={p.imgSrc}
                   alt="Boss students out in the community."
                 />
