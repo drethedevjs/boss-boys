@@ -5,7 +5,7 @@ const Hero = () => {
     <div
       className="hero min-h-screen"
       style={{
-        backgroundImage: "url(/images/news-station.jpg)"
+        backgroundImage: "url(/images/boss-hero.jpg)"
       }}
     >
       <div className="hero-overlay"></div>
@@ -20,7 +20,7 @@ const Hero = () => {
           </p>
           <div className="space-x-5 font-medium">
             <NavLink to="/about">
-              <button className="bg-boss-gold py-3 px-5 rounded-md">
+              <button className="boss-btn-gold boss-btn hover:font-semibold">
                 Learn More
               </button>
             </NavLink>
@@ -28,7 +28,7 @@ const Hero = () => {
               to="https://www.paypal.com/donate/?hosted_button_id=B8HFHLRW86GEY"
               target="_blank"
             >
-              <button className="bg-boss-green py-3 px-5 rounded-md">
+              <button className="boss-btn-green boss-btn hover:font-semibold">
                 Donate
               </button>
             </NavLink>

@@ -58,7 +58,7 @@
 }
 
 .boss-btn-green {
-  @apply text-white ring-1 ring-boss-green bg-boss-green hover:bg-white hover:text-boss-green;
+  @apply text-white ring-1 ring-boss-green bg-boss-green hover:bg-transparent hover:text-boss-green dark:hover:text-white;
 }
 
 .boss-btn-color {
@@ -66,7 +66,7 @@
 }
 
 .boss-btn-gold {
-  @apply text-white ring-1 ring-boss-gold bg-boss-gold hover:bg-transparent hover:text-boss-gold;
+  @apply text-white ring-1 ring-boss-gold bg-boss-gold hover:bg-transparent hover:text-boss-gold dark:hover:text-white;
 }
 
 .boss-btn-error {
