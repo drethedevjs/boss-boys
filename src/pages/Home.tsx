@@ -8,7 +8,10 @@ const Home = () => {
       <Hero />
       <Pillars />
 
-      <section id="blog-post" className="p-10 place-content-center">
+      <section
+        id="blog-post"
+        className="py-10 px-10 lg:px-24 xl:px-52 2xl:px-84 place-content-center"
+      >
         <h2 className="text-center mb-10!">See What We've Done</h2>
         <div className="grid gap-4 grid-cols-1 lg:grid-cols-3">
           {posts.map((p, idx) => (
@@ -16,8 +19,12 @@ const Home = () => {
               key={idx}
               className="card bg-base-100 shadow-sm border-boss-gold dark:border"
             >
-              <figure className="h-52">
-                <img className="object-fill" src={p.imgSrc} alt="Shoes" />
+              <figure>
+                <img
+                  className="object-cover h-52 w-full"
+                  src={p.imgSrc}
+                  alt="Boss students out in the community."
+                />
               </figure>
               <div className="card-body">
                 <h2 className="card-title">
