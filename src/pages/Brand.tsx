@@ -96,7 +96,8 @@ export const Brand = () => {
       <h3>Secondary</h3>
       <a
         className="flex space-x-5 place-items-center mb-10"
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.google.com/specimen/Roboto"
+        target="_blank"
       >
         <p className="mb-0!">Roboto Font</p>
         <Link />

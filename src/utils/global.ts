@@ -15,15 +15,18 @@ export const writeToClipboard = async (
     console.error("Failed to copy to clipboard:", err);
   }
 };
-const modalElement = document.getElementById(
-  "download-modal"
-) as HTMLDialogElement;
 
 export const hideModal = () => {
+  const modalElement = document.getElementById(
+    "download-modal"
+  ) as HTMLDialogElement;
   modalElement?.close();
 };
 
 export const showModal = () => {
+  const modalElement = document.getElementById(
+    "download-modal"
+  ) as HTMLDialogElement;
   modalElement?.showModal();
 };
 
