@@ -12,8 +12,12 @@ export const Files = () => {
                 className="card bg-boss-green w-96 text-primary-content border dark:border-boss-gold"
               >
                 <div className="card-body">
-                  <h2 className="card-title">{f.title}</h2>
-                  <p>{f.description}</p>
+                  <h2 className="card-title dark:text-boss-gold! text-white!">
+                    {f.title}
+                  </h2>
+                  <p className="dark:text-boss-gold! text-white!">
+                    {f.description}
+                  </p>
                   <div className="card-actions justify-end">
                     <a
                       href={`/files/${f.fileName}`}
