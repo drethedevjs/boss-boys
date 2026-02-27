@@ -7,6 +7,7 @@ import RootLayout from "./layouts/RootLayout";
 import { About } from "./pages/About";
 import { BecomeAMember } from "./pages/BecomeAMember";
 import { Brand } from "./pages/Brand";
+import { CapStone } from "./pages/CapStone";
 import { CommunityLeaders } from "./pages/CommunityLeaders";
 import { FaithfulHusbands } from "./pages/FaithfulHusbands";
 import { Files } from "./pages/Files";
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "join",
         element: <BecomeAMember />
+      },
+      {
+        path: "capstone",
+        element: <CapStone />
       },
       {
         path: "rhythm",
