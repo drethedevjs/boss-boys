@@ -28,7 +28,7 @@ const Hero = () => {
             <NavLink
               to="https://www.paypal.com/donate/?hosted_button_id=B8HFHLRW86GEY"
               target="_blank"
-              className="boss-btn-green boss-btn hover:font-semibold"
+              className="boss-btn-green boss-btn hover:font-semibold hover:text-white!"
             >
               Donate
             </NavLink>
