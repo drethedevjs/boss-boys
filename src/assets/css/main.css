@@ -117,3 +117,7 @@ h3 {
 .boss-container p {
   @apply mb-6 lg:text-2xl;
 }
+
+p a {
+  @apply underline hover:text-boss-gold transition-colors;
+}
