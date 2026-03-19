@@ -119,5 +119,5 @@ h3 {
 }
 
 p a {
-  @apply underline hover:text-boss-gold transition-colors;
+  @apply underline hover:text-boss-gold dark:hover:text-white transition-colors;
 }
