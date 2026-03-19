@@ -7,8 +7,11 @@ export const Pledge = () => {
         Our pledge is what we say every meeting. All BOSS members must memorize
         it.
       </p>
+
+      {/* horizontal line */}
       <div className="border-2 w-1/3 mx-auto mb-8 rounded-xl border-boss-green dark:border-boss-gold"></div>
-      <div className="text-center">
+
+      <div className="mx-auto text-center lg:max-w-1/2">
         <p>We are boys of Superior Standard.</p>
         <p>
           <b>We are leaders</b> because we are model students and we hold each
