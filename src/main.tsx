@@ -16,6 +16,7 @@ import { LovingFathers } from "./pages/LovingFathers";
 import { MeetTheMentor } from "./pages/MeetTheMentor";
 import { MissionVision } from "./pages/MissionVision";
 import { Pledge } from "./pages/Pledge";
+import { Volunteer } from "./pages/Volunteer";
 import { WeeklyRhythm } from "./pages/WeeklyRhythm";
 
 const scrollMiddleware = () => {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "brand",
         element: <Brand />
+      },
+      {
+        path: "volunteer",
+        element: <Volunteer />
       },
       {
         path: "meet-the-mentor",
