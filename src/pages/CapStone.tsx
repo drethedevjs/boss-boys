@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import { BossPage } from "../components/BossPage";
 
 export const CapStone = () => {
@@ -150,14 +151,14 @@ export const CapStone = () => {
         after your topic has been approved. Bring it with you on the day you
         present — it's your roadmap.
       </p>
-      <a
-        href="https://www.bossboys.group/files/discussion-guide-template.pdf"
+      <NavLink
+        to="/files/discussion-guide-template.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="mb-5 inline-block bg-boss-gold text-white font-good-times rounded-2xl px-5 py-2 mt-2 hover:opacity-90 transition-opacity"
       >
         Download Discussion Guide Template
-      </a>
+      </NavLink>
 
       {/* ── PRESENTATION DAY ── */}
       <h2>Presentation Day</h2>
