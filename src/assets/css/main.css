@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
+@import "./lead-a-discussion.css";
 @plugin "daisyui";
 
 @layer base;
@@ -67,6 +68,10 @@
 
 .boss-btn-gold {
   @apply text-white ring-1 ring-boss-gold bg-boss-gold hover:bg-transparent dark:hover:text-white;
+}
+
+.boss-btn-gold-alt {
+  @apply text-white ring-1 ring-boss-gold bg-boss-gold hover:text-boss-gold hover:bg-transparent dark:hover:text-white;
 }
 
 .boss-btn-error {

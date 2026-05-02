@@ -16,6 +16,7 @@ import { LovingFathers } from "./pages/LovingFathers";
 import { MeetTheMentor } from "./pages/MeetTheMentor";
 import { MissionVision } from "./pages/MissionVision";
 import { Pledge } from "./pages/Pledge";
+import { LeadADiscussion } from "./pages/LeadADiscussion";
 import { Volunteer } from "./pages/Volunteer";
 import { WeeklyRhythm } from "./pages/WeeklyRhythm";
 
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: "volunteer",
         element: <Volunteer />
+      },
+      {
+        path: "lead-a-discussion",
+        element: <LeadADiscussion />
       },
       {
         path: "meet-the-mentor",

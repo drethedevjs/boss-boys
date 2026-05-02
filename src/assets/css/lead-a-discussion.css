@@ -1,0 +1,171 @@
+.lead-hero {
+  @apply py-10 lg:py-16;
+}
+
+.lead-hero-image-placeholder {
+  @apply w-full rounded-xl mb-8 object-cover;
+  aspect-ratio: 21 / 9;
+}
+
+.lead-placeholder-label {
+  @apply text-neutral-500 dark:text-neutral-400 text-sm font-medium tracking-wide uppercase;
+}
+
+.lead-hero-text {
+  @apply max-w-3xl;
+}
+
+.lead-hero-sub {
+  @apply lg:text-xl text-neutral-600 dark:text-neutral-300 leading-relaxed;
+}
+
+.lead-section {
+  @apply py-8 lg:py-12;
+}
+
+.lead-what-section {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-10 items-center;
+}
+
+.lead-what-image-placeholder {
+  @apply w-full rounded-xl object-cover order-first lg:order-last;
+  aspect-ratio: 4 / 3;
+}
+
+.lead-what-text {
+  @apply order-last lg:order-first;
+}
+
+.lead-topics-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8;
+}
+
+.lead-topic-card {
+  @apply rounded-xl p-6 ring-1 ring-neutral-200 dark:ring-neutral-700 bg-neutral-50 dark:bg-neutral-800 hover:ring-boss-gold transition-all;
+}
+
+.lead-topic-icon {
+  @apply text-4xl mb-3;
+}
+
+.lead-topic-title {
+  font-family: var(--font-good-times);
+  @apply text-base lg:text-lg mb-2 font-semibold;
+}
+
+.lead-topic-desc {
+  @apply text-sm lg:text-base text-neutral-600 dark:text-neutral-400 mb-0;
+}
+
+.lead-steps {
+  @apply flex flex-col gap-8 mt-6;
+}
+
+.lead-step {
+  @apply flex items-start gap-6;
+}
+
+.lead-step-number {
+  font-family: var(--font-good-times);
+  @apply text-4xl lg:text-5xl font-bold text-boss-gold shrink-0 leading-none;
+}
+
+.lead-step-title {
+  @apply text-lg lg:text-2xl font-bold mb-1;
+}
+
+.lead-step-detail {
+  @apply lg:text-lg text-neutral-600 dark:text-neutral-400 mb-0;
+}
+
+.lead-quote-section {
+  @apply relative rounded-xl overflow-hidden my-8;
+}
+
+.lead-quote-image-placeholder {
+  @apply w-full object-cover;
+  aspect-ratio: 21 / 7;
+}
+
+.lead-quote {
+  @apply absolute inset-0 flex flex-col items-center justify-center px-8 bg-black/60;
+}
+
+.lead-quote p {
+  @apply text-white text-center text-lg lg:text-2xl italic max-w-3xl mb-3;
+}
+
+.lead-quote cite {
+  @apply text-boss-gold text-sm lg:text-base not-italic font-semibold;
+}
+
+.lead-cta {
+  @apply text-center py-12 lg:py-20 bg-boss-green rounded-xl px-6 mt-4;
+}
+
+.lead-cta h2,
+.lead-cta p {
+  @apply text-white dark:text-white;
+}
+
+/* ── Shared section components ───────────────────────────────── */
+
+.gold-divider {
+  @apply border-t-2 border-boss-gold my-10 lg:my-16;
+}
+
+.section-title {
+  font-family: var(--font-good-times);
+  @apply text-2xl lg:text-4xl mb-4;
+}
+
+.section-body {
+  @apply mb-4 lg:text-xl;
+}
+
+.cta-heading {
+  font-family: var(--font-good-times);
+  @apply text-2xl lg:text-4xl mb-4;
+}
+
+.cta-sub {
+  @apply mb-6 lg:text-xl max-w-2xl mx-auto;
+}
+
+/* ── Volunteer page ──────────────────────────────────────────── */
+
+.volunteer-hero {
+  @apply text-center py-10 lg:py-16;
+}
+
+.volunteer-sub {
+  @apply lg:text-xl max-w-2xl mx-auto mt-4 mb-6;
+}
+
+.volunteer-section {
+  @apply py-6 lg:py-10;
+}
+
+.pillars-grid {
+  @apply flex flex-wrap gap-4 my-6;
+}
+
+.pillar-label {
+  @apply flex items-center gap-2 text-base lg:text-xl font-semibold;
+}
+
+.pillar-icon {
+  @apply text-2xl;
+}
+
+.volunteer-cta {
+  @apply text-center py-10 lg:py-16;
+}
+
+.commitment-block {
+  @apply bg-neutral-100 dark:bg-neutral-800 rounded-xl p-6 lg:p-10;
+}
+
+.bullet {
+  @apply inline-block w-2 h-2 rounded-full bg-boss-gold mr-2 align-middle;
+}
