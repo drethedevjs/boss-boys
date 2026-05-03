@@ -130,3 +130,19 @@ h3 {
 p a {
   @apply underline hover:text-boss-gold dark:hover:text-white transition-colors;
 }
+
+footer {
+  @apply bg-boss-gold py-3 text-center;
+}
+
+.footer-copy {
+  @apply text-sm text-boss-green mb-2;
+}
+
+.footer-powered {
+  @apply text-xs text-boss-green mb-0;
+}
+
+.footer-powered a {
+  @apply text-boss-green no-underline font-bold hover:tracking-widest transition-all;
+}
