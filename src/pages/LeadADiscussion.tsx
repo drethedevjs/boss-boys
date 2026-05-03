@@ -12,7 +12,7 @@ export const LeadADiscussion = () => {
           className="lead-hero-image-placeholder"
         />
         <div className="lead-hero-text">
-          <h1 className="page-header">Lead a Discussion</h1>
+          <h1 className="page-header text-center!">Lead a Discussion</h1>
           <p className="lead-hero-sub">
             You have lived through things these boys haven't faced yet. Your
             story — the wins, the setbacks, the lessons — is exactly what they
