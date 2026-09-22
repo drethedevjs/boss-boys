@@ -27,5 +27,10 @@ export const files = [
     description:
       "This application will allow locals to register themselves with the school district.",
     fileName: "nam-volunteer-application.pdf"
+  },
+  {
+    title: "Benedict College Permission Slip",
+    description: "Permission slip to go to Benedict College.",
+    fileName: "benedict-college-permission-slip.pdf"
   }
 ];
